@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "OctoDragon",
+			"Path": "C:\\Users\\Kshaya\\Documents\\GitHub\\OctoDragon\\OctoDragon\\Source\\OctoDragon.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "OctoDragonEditor",
+			"Path": "C:\\Users\\Kshaya\\Documents\\GitHub\\OctoDragon\\OctoDragon\\Source\\OctoDragonEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
