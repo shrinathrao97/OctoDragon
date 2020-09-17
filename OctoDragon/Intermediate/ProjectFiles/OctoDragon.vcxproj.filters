@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\OctoDragon.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3F425A3D-01E3-4BC7-9D9C-A1FD3586BA8E}</UniqueIdentifier>
+      <UniqueIdentifier>{4DDFC893-14A4-466A-AAB5-EFED0593A88A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\OctoDragon.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{EB567362-CED3-4236-BF10-5EB4D6349F2A}</UniqueIdentifier>
+      <UniqueIdentifier>{A36E3379-9C19-4B15-9EBC-8843F5AD3474}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,8 +30,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\OctoDragon">
-      <UniqueIdentifier>{DB687658-8B84-437C-88CB-FFEF28829C78}</UniqueIdentifier>
+      <UniqueIdentifier>{CE1C36D2-C9C0-4474-8118-EA6375025F8A}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\OctoDragon\Character1.cpp">
+      <Filter>Source\OctoDragon</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\OctoDragon\Character1.h">
+      <Filter>Source\OctoDragon</Filter>
+    </ClInclude>
     <None Include="..\..\Source\OctoDragon\OctoDragon.Build.cs">
       <Filter>Source\OctoDragon</Filter>
     </None>
