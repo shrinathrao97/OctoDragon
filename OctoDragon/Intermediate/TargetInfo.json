@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "OctoDragon",
-			"Path": "C:\\Users\\Hudson Bielstein\\Documents\\GitHub\\OctoDragon\\OctoDragon\\Source\\OctoDragon.Target.cs",
+			"Path": "C:\\Users\\Kshaya\\Documents\\GitHub\\OctoDragon\\OctoDragon\\Source\\OctoDragon.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "OctoDragonEditor",
-			"Path": "C:\\Users\\Hudson Bielstein\\Documents\\GitHub\\OctoDragon\\OctoDragon\\Source\\OctoDragonEditor.Target.cs",
+			"Path": "C:\\Users\\Kshaya\\Documents\\GitHub\\OctoDragon\\OctoDragon\\Source\\OctoDragonEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
