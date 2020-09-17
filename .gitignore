@@ -72,3 +72,7 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+OctoDragon/Saved/AutoScreenshot.png
+OctoDragon/Intermediate/CachedAssetRegistry.bin
+OctoDragon/Saved/Config/CrashReportClient/UE4CC-Windows-B3A35C5E40BFC2A4AC1B34BC3CBA1993/CrashReportClient.ini
+OctoDragon/Saved/Logs/OctoDragon.log
