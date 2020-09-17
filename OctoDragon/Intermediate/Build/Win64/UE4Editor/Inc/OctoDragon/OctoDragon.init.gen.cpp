@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeOctoDragon_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x33E56582,
-				0x82644A7D,
+				0x6ED5276D,
+				0x3F31B99D,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
