@@ -71,6 +71,7 @@
 "C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
 "C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
 "C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\InputCore\UE4Editor-InputCore.lib"
+"C:\Program Files\Epic Games\UE_4.25\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Development\Paper2D\UE4Editor-Paper2D.lib"
 /OUT:"C:\Users\Kshaya\Documents\GitHub\OctoDragon\OctoDragon\Binaries\Win64\UE4Editor-OctoDragon.dll"
 /IMPLIB:"C:\Users\Kshaya\Documents\GitHub\OctoDragon\OctoDragon\Intermediate\Build\Win64\UE4Editor\Development\OctoDragon\UE4Editor-OctoDragon.suppressed.lib"
 /PDB:"C:\Users\Kshaya\Documents\GitHub\OctoDragon\OctoDragon\Binaries\Win64\UE4Editor-OctoDragon.pdb"
