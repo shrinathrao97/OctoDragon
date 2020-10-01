@@ -41,8 +41,8 @@ ACharacter1::ACharacter1()
 	MainFollowCamera->bUsePawnControlRotation = false;
 
 	// Character Movement Stuff
-	GetCharacterMovement()->bOrientRotationToMovement = true;
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 720.0f, 0.0f); // ...at this rotation rate
+	GetCharacterMovement()->bOrientRotationToMovement = false;
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 0.0f, 0.0f); // ...at this rotation rate
 	GetCharacterMovement()->GravityScale = 2.f;
 	GetCharacterMovement()->AirControl = 0.80f;
 	GetCharacterMovement()->JumpZVelocity = 1000.f;
@@ -85,13 +85,25 @@ void ACharacter1::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 void ACharacter1::MoveRight(float value)
 {
+	if (value < 0) {
+	
+		SetActorRelativeRotation(FRotator(0.0f, 90.0f, 0.0f));
 
+	
+	}
+
+	if (value > 0) {
+
+		SetActorRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
+
+
+	}
 	AddMovementInput(FVector(0.f, -1.f, 0.f), value);
+	
 }
 
 void ACharacter1::MoveUp(float value)
 {
-
 	AddMovementInput(FVector(-1.f, 0.f, 0.f), value);
 }
 
