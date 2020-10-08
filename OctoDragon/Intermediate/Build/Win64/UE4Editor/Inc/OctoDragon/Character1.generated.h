@@ -58,7 +58,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACharacter1); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACharacter1)
 
 
-#define OctoDragon_Source_OctoDragon_Character1_h_12_PRIVATE_PROPERTY_OFFSET
+#define OctoDragon_Source_OctoDragon_Character1_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__WalkAnimation() { return STRUCT_OFFSET(ACharacter1, WalkAnimation); } \
+	FORCEINLINE static uint32 __PPO__RunAnimation() { return STRUCT_OFFSET(ACharacter1, RunAnimation); } \
+	FORCEINLINE static uint32 __PPO__IdleAnimation() { return STRUCT_OFFSET(ACharacter1, IdleAnimation); } \
+	FORCEINLINE static uint32 __PPO__IsCurrMoving() { return STRUCT_OFFSET(ACharacter1, IsCurrMoving); } \
+	FORCEINLINE static uint32 __PPO__IsFacingForward() { return STRUCT_OFFSET(ACharacter1, IsFacingForward); }
+
+
 #define OctoDragon_Source_OctoDragon_Character1_h_9_PROLOG
 #define OctoDragon_Source_OctoDragon_Character1_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

@@ -31,3 +31,5 @@ C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperFlipbookComponent.h
 C:\Program Files\Epic Games\UE_4.25\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperFlipbookComponent.generated.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperFlipBook.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Plugins\2D\Paper2D\Intermediate\Build\Win64\UE4Editor\Inc\Paper2D\PaperFlipbook.generated.h
