@@ -53,6 +53,14 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MainFollowCamera;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ComboResetTimer_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ComboResetTimer;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ComboCounter_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ComboCounter;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsFacingForward_MetaData[];
 #endif
 		static void NewProp_IsFacingForward_SetBit(void* Obj);
@@ -129,6 +137,20 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_MainFollowCamera = { "MainFollowCamera", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter1, MainFollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_MainFollowCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_MainFollowCamera_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboResetTimer_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "Character1.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboResetTimer = { "ComboResetTimer", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter1, ComboResetTimer), METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboResetTimer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboResetTimer_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboCounter_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "Character1.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboCounter = { "ComboCounter", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter1, ComboCounter), METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboCounter_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboCounter_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_IsFacingForward_MetaData[] = {
 		{ "Category", "Gameplay" },
 		{ "ModuleRelativePath", "Character1.h" },
@@ -178,6 +200,8 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_FlipBook,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_MainFollowCamera,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboResetTimer,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_ComboCounter,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_IsFacingForward,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_IsCurrMoving,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_IdleAnimation,
@@ -211,7 +235,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACharacter1, 1100673087);
+	IMPLEMENT_CLASS(ACharacter1, 1703686481);
 	template<> OCTODRAGON_API UClass* StaticClass<ACharacter1>()
 	{
 		return ACharacter1::StaticClass();

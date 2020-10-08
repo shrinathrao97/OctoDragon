@@ -51,7 +51,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C0274C9E-FF74-4C72-AC66-9D1A046A2EFE}</ProjectGuid>
+    <ProjectGuid>{3DE186BF-6F37-4CDE-9B97-C8647A8F4109}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>OctoDragon</RootNamespace>
     <PlatformToolset>v141</PlatformToolset>

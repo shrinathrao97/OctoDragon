@@ -63,7 +63,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACharacter1); \
 	FORCEINLINE static uint32 __PPO__RunAnimation() { return STRUCT_OFFSET(ACharacter1, RunAnimation); } \
 	FORCEINLINE static uint32 __PPO__IdleAnimation() { return STRUCT_OFFSET(ACharacter1, IdleAnimation); } \
 	FORCEINLINE static uint32 __PPO__IsCurrMoving() { return STRUCT_OFFSET(ACharacter1, IsCurrMoving); } \
-	FORCEINLINE static uint32 __PPO__IsFacingForward() { return STRUCT_OFFSET(ACharacter1, IsFacingForward); }
+	FORCEINLINE static uint32 __PPO__IsFacingForward() { return STRUCT_OFFSET(ACharacter1, IsFacingForward); } \
+	FORCEINLINE static uint32 __PPO__ComboCounter() { return STRUCT_OFFSET(ACharacter1, ComboCounter); } \
+	FORCEINLINE static uint32 __PPO__ComboResetTimer() { return STRUCT_OFFSET(ACharacter1, ComboResetTimer); }
 
 
 #define OctoDragon_Source_OctoDragon_Character1_h_9_PROLOG
