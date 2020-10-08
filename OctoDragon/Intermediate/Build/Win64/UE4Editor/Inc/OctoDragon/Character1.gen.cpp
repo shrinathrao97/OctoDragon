@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbookComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
+	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbook_NoRegister();
 // End Cross Module References
 	void ACharacter1::StaticRegisterNativesACharacter1()
 	{
@@ -35,6 +36,11 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_canMove_MetaData[];
+#endif
+		static void NewProp_canMove_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_canMove;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FlipBook_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FlipBook;
@@ -46,6 +52,28 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MainFollowCamera_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MainFollowCamera;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsFacingForward_MetaData[];
+#endif
+		static void NewProp_IsFacingForward_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsFacingForward;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsCurrMoving_MetaData[];
+#endif
+		static void NewProp_IsCurrMoving_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsCurrMoving;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IdleAnimation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_IdleAnimation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RunAnimation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_RunAnimation;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WalkAnimation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WalkAnimation;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -61,6 +89,19 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 		{ "ModuleRelativePath", "Character1.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_canMove_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "Comment", "//Variables\n" },
+		{ "ModuleRelativePath", "Character1.h" },
+		{ "ToolTip", "Variables" },
+	};
+#endif
+	void Z_Construct_UClass_ACharacter1_Statics::NewProp_canMove_SetBit(void* Obj)
+	{
+		((ACharacter1*)Obj)->canMove = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_canMove = { "canMove", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ACharacter1), &Z_Construct_UClass_ACharacter1_Statics::NewProp_canMove_SetBit, METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_canMove_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_canMove_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_FlipBook_MetaData[] = {
 		{ "Category", "Visuals" },
@@ -80,15 +121,68 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_MainFollowCamera_MetaData[] = {
 		{ "Category", "Camera" },
+		{ "Comment", "//Components\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Character1.h" },
+		{ "ToolTip", "Components" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_MainFollowCamera = { "MainFollowCamera", nullptr, (EPropertyFlags)0x001000000008000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter1, MainFollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_MainFollowCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_MainFollowCamera_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_IsFacingForward_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "Character1.h" },
+	};
+#endif
+	void Z_Construct_UClass_ACharacter1_Statics::NewProp_IsFacingForward_SetBit(void* Obj)
+	{
+		((ACharacter1*)Obj)->IsFacingForward = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_IsFacingForward = { "IsFacingForward", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ACharacter1), &Z_Construct_UClass_ACharacter1_Statics::NewProp_IsFacingForward_SetBit, METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_IsFacingForward_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_IsFacingForward_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_IsCurrMoving_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "ModuleRelativePath", "Character1.h" },
+	};
+#endif
+	void Z_Construct_UClass_ACharacter1_Statics::NewProp_IsCurrMoving_SetBit(void* Obj)
+	{
+		((ACharacter1*)Obj)->IsCurrMoving = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_IsCurrMoving = { "IsCurrMoving", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ACharacter1), &Z_Construct_UClass_ACharacter1_Statics::NewProp_IsCurrMoving_SetBit, METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_IsCurrMoving_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_IsCurrMoving_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_IdleAnimation_MetaData[] = {
+		{ "Category", "Visuals" },
+		{ "ModuleRelativePath", "Character1.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_IdleAnimation = { "IdleAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter1, IdleAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_IdleAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_IdleAnimation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_RunAnimation_MetaData[] = {
+		{ "Category", "Visuals" },
+		{ "ModuleRelativePath", "Character1.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_RunAnimation = { "RunAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter1, RunAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_RunAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_RunAnimation_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACharacter1_Statics::NewProp_WalkAnimation_MetaData[] = {
+		{ "Category", "Visuals" },
+		{ "Comment", "//Vars\n" },
+		{ "ModuleRelativePath", "Character1.h" },
+		{ "ToolTip", "Vars" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACharacter1_Statics::NewProp_WalkAnimation = { "WalkAnimation", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ACharacter1, WalkAnimation), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ACharacter1_Statics::NewProp_WalkAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ACharacter1_Statics::NewProp_WalkAnimation_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACharacter1_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_canMove,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_FlipBook,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_MainFollowCamera,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_IsFacingForward,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_IsCurrMoving,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_IdleAnimation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_RunAnimation,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACharacter1_Statics::NewProp_WalkAnimation,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACharacter1_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACharacter1>::IsAbstract,
@@ -117,7 +211,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacter1() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACharacter1, 206450825);
+	IMPLEMENT_CLASS(ACharacter1, 1100673087);
 	template<> OCTODRAGON_API UClass* StaticClass<ACharacter1>()
 	{
 		return ACharacter1::StaticClass();

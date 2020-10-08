@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeOctoDragon_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x6ED5276D,
+				0x62AF67C0,
 				0x3F31B99D,
 				METADATA_PARAMS(nullptr, 0)
 			};

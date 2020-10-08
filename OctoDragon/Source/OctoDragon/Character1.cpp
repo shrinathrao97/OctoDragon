@@ -8,11 +8,13 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "PaperFlipbookComponent.h"
+#include "PaperFlipBook.h"
 
 
 // Sets default values
 ACharacter1::ACharacter1()
 {
+
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -23,8 +25,13 @@ ACharacter1::ACharacter1()
 	bUseControllerRotationRoll = false;
 	bUseControllerRotationYaw = false;
 
+	//Setup Gameplay Variables
+	IsCurrMoving = false;
+	IsFacingForward = true;
+
 	//Sprite Renderer
 	FlipBook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("2D Renderer"));
+	FlipBook->SetupAttachment(RootComponent);
 
 	//Camera Boom
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("Camera Boom"));
@@ -41,6 +48,7 @@ ACharacter1::ACharacter1()
 	MainFollowCamera->bUsePawnControlRotation = false;
 
 	// Character Movement Stuff
+	canMove = true;
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 0.0f, 0.0f); // ...at this rotation rate
 	GetCharacterMovement()->GravityScale = 2.f;
@@ -68,6 +76,11 @@ void ACharacter1::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (GetCharacterMovement()->Velocity.Size() == 0.0f) {
+	
+		IsCurrMoving = false;
+	
+	}
 }
 
 
@@ -75,6 +88,7 @@ void ACharacter1::Tick(float DeltaTime)
 // Called to bind functionality to input
 void ACharacter1::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
+
 	// Key Bindings
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
@@ -85,25 +99,35 @@ void ACharacter1::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 void ACharacter1::MoveRight(float value)
 {
-	if (value < 0) {
 	
+	
+	if (value < 0 ) {
+		IsCurrMoving = true;
 		SetActorRelativeRotation(FRotator(0.0f, 90.0f, 0.0f));
+		IsFacingForward = false;
 
-	
 	}
 
 	if (value > 0) {
-
+		IsCurrMoving = true;
 		SetActorRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
-
+		IsFacingForward = true;
 
 	}
-	AddMovementInput(FVector(0.f, -1.f, 0.f), value);
+
+	if (canMove == true) {
+		AddMovementInput(FVector(0.f, -1.f, 0.f), value);
+	}
+	
 	
 }
 
 void ACharacter1::MoveUp(float value)
 {
-	AddMovementInput(FVector(-1.f, 0.f, 0.f), value);
+	if (value != 0 && canMove == true){
+		IsCurrMoving = true;
+		AddMovementInput(FVector(-1.f, 0.f, 0.f), value);
+	}
+	
 }
 

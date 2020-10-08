@@ -18,15 +18,32 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	// Move Right
+	
+	//Functions
+	// Movement Functions
 	void MoveRight(float value);
 
-	// Move Z-
 	void MoveUp(float value);
+
+	//Vars
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Visuals")
+		class UPaperFlipBook* WalkAnimation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Visuals")
+		class UPaperFlipbook* RunAnimation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Visuals")
+		class UPaperFlipbook* IdleAnimation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
+		bool IsCurrMoving;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
+		bool IsFacingForward;
 
 public:
 
+	//Components
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
 		class UCameraComponent* MainFollowCamera;
 
@@ -35,6 +52,10 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Visuals")
 		class UPaperFlipbookComponent* FlipBook;
+
+	//Variables
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
+		bool canMove;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
