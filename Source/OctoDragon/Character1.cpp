@@ -28,6 +28,7 @@ ACharacter1::ACharacter1()
 	//Setup Gameplay Variables
 	IsCurrMoving = false;
 	IsFacingForward = true;
+	ComboResetTimer = 0.0f;
 
 	//Sprite Renderer
 	FlipBook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("2D Renderer"));
@@ -50,7 +51,7 @@ ACharacter1::ACharacter1()
 	// Character Movement Stuff
 	canMove = true;
 	GetCharacterMovement()->bOrientRotationToMovement = false;
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 0.0f, 0.0f); // ...at this rotation rate
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 0.0f, 0.0f); 
 	GetCharacterMovement()->GravityScale = 2.f;
 	GetCharacterMovement()->AirControl = 0.80f;
 	GetCharacterMovement()->JumpZVelocity = 1000.f;
