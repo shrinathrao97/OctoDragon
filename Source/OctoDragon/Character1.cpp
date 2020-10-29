@@ -17,7 +17,6 @@ ACharacter1::ACharacter1()
 
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
 	// Don't rotate when the controller rotates 
@@ -25,10 +24,16 @@ ACharacter1::ACharacter1()
 	bUseControllerRotationRoll = false;
 	bUseControllerRotationYaw = false;
 
+	//Setup UI Vars
+	PlayerName = FString(TEXT("Kshaya"));
+
 	//Setup Gameplay Variables
 	IsCurrMoving = false;
 	IsFacingForward = true;
-	ComboResetTimer = 0.0f;
+	CanMove = true;
+	ComboCounter = 0;
+	InsideTimer = false;
+	ShouldResetCombo = true;
 
 	//Sprite Renderer
 	FlipBook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("2D Renderer"));
@@ -49,7 +54,6 @@ ACharacter1::ACharacter1()
 	MainFollowCamera->bUsePawnControlRotation = false;
 
 	// Character Movement Stuff
-	canMove = true;
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 0.0f, 0.0f); 
 	GetCharacterMovement()->GravityScale = 2.f;
@@ -71,7 +75,6 @@ void ACharacter1::BeginPlay()
 }
 
 
-
 // Called every frame
 void ACharacter1::Tick(float DeltaTime)
 {
@@ -83,7 +86,6 @@ void ACharacter1::Tick(float DeltaTime)
 	
 	}
 }
-
 
 
 // Called to bind functionality to input
@@ -116,7 +118,7 @@ void ACharacter1::MoveRight(float value)
 
 	}
 
-	if (canMove == true) {
+	if (CanMove == true) {
 		AddMovementInput(FVector(0.f, -1.f, 0.f), value);
 	}
 	
@@ -125,10 +127,9 @@ void ACharacter1::MoveRight(float value)
 
 void ACharacter1::MoveUp(float value)
 {
-	if (value != 0 && canMove == true){
+	if (value != 0 && CanMove == true){
 		IsCurrMoving = true;
 		AddMovementInput(FVector(-1.f, 0.f, 0.f), value);
 	}
 	
 }
-

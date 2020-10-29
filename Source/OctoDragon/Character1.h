@@ -25,6 +25,9 @@ protected:
 
 	void MoveUp(float value);
 
+
+
+
 	//Vars
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Visuals")
 		class UPaperFlipBook* WalkAnimation;
@@ -45,8 +48,10 @@ protected:
 		int ComboCounter;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
-		float ComboResetTimer;
+		bool InsideTimer;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
+		bool ShouldResetCombo;
 
 public:
 
@@ -62,7 +67,10 @@ public:
 
 	//Variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
-		bool canMove;
+		bool CanMove;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
+		FString PlayerName;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
