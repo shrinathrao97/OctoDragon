@@ -41,7 +41,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Physics")
 		class UCapsuleComponent* Capsule;
 
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Physics")
+		class UArrowComponent* Arrow;
 
 
 	// Called every frame

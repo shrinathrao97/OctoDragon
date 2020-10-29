@@ -7,6 +7,8 @@
 #include "PaperFlipbookComponent.h"
 #include "PaperFlipBook.h"
 #include "Character1.h"
+#include "Components/ArrowComponent.h"
+
 
 // Sets default values
 AEnemyGrunt::AEnemyGrunt()
@@ -23,8 +25,13 @@ AEnemyGrunt::AEnemyGrunt()
 	FlipBook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("2D Renderer"));
 	FlipBook->SetupAttachment(Capsule);
 
+	//Setup Arrow Component
+	Arrow = CreateDefaultSubobject<UArrowComponent>(TEXT("Arrow"));
+	Arrow->SetupAttachment(Capsule);
 
+	//SetupStartinRotations
 
+	SetActorRelativeRotation(FRotator(0.0f, 90.0f, 0.0f));
 
 
 	
