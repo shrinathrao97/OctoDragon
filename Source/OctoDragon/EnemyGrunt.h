@@ -16,14 +16,6 @@ public:
 	// Sets default values for this pawn's properties
 	AEnemyGrunt();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
-		bool isAttacking;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
-		FString AiState;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gameplay")
-		APawn* Player;
 
 
 protected:

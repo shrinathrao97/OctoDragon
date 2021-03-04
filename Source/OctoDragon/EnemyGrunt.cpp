@@ -44,10 +44,6 @@ void AEnemyGrunt::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//We're getting reference to player on spawn
-	Player = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-	ACharacter1* PlayerCharacter = Cast<ACharacter1>(Player);
-	AiState = PlayerCharacter->PlayerName;
 
 }
 
