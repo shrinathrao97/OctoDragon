@@ -2,40 +2,31 @@
 
 
 #include "EnemyGrunt.h"
-#include "Kismet/GameplayStatics.h"
-#include "Components/CapsuleComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "PaperFlipbookComponent.h"
 #include "PaperFlipBook.h"
-#include "Character1.h"
-#include "Components/ArrowComponent.h"
-
+#include "Components/CapsuleComponent.h"
 
 // Sets default values
 AEnemyGrunt::AEnemyGrunt()
 {
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+ 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
-	//Setup Capsule Root
-	Capsule = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Capsule"));
-	Capsule->InitCapsuleSize(42.f, 96.0f);
-	RootComponent = Capsule;
-
-	//Setup Flipbook
+	//Sprite Renderer
 	FlipBook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("2D Renderer"));
-	FlipBook->SetupAttachment(Capsule);
+	FlipBook->SetupAttachment(RootComponent);
 
-	//Setup Arrow Component
-	Arrow = CreateDefaultSubobject<UArrowComponent>(TEXT("Arrow"));
-	Arrow->SetupAttachment(Capsule);
-
-	//SetupStartinRotations
-
-	SetActorRelativeRotation(FRotator(0.0f, 90.0f, 0.0f));
-
-
-	
-
+	// Character Movement Stuff
+	GetCharacterMovement()->bOrientRotationToMovement = false;
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 0.0f, 0.0f);
+	GetCharacterMovement()->GravityScale = 2.f;
+	GetCharacterMovement()->AirControl = 0.80f;
+	GetCharacterMovement()->JumpZVelocity = 1000.f;
+	GetCharacterMovement()->GroundFriction = 3.f;
+	GetCharacterMovement()->MaxWalkSpeed = 600.f;
+	GetCharacterMovement()->MaxFlySpeed = 600.f;
 
 }
 
@@ -43,14 +34,12 @@ AEnemyGrunt::AEnemyGrunt()
 void AEnemyGrunt::BeginPlay()
 {
 	Super::BeginPlay();
-
-
+	
 }
 
 // Called every frame
 void AEnemyGrunt::Tick(float DeltaTime)
 {
-
 	Super::Tick(DeltaTime);
 
 }
@@ -58,7 +47,6 @@ void AEnemyGrunt::Tick(float DeltaTime)
 // Called to bind functionality to input
 void AEnemyGrunt::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 }

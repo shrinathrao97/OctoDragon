@@ -3,39 +3,33 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
+#include "GameFramework/Character.h"
 #include "EnemyGrunt.generated.h"
 
 UCLASS()
-class OCTODRAGON_API AEnemyGrunt : public APawn
+class OCTODRAGON_API AEnemyGrunt : public ACharacter
 {
 	GENERATED_BODY()
 
-
 public:
-	// Sets default values for this pawn's properties
+	// Sets default values for this character's properties
 	AEnemyGrunt();
-
-
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Visuals")
+		class UPaperFlipbook* IdleAnimation;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Visuals")
+		class UPaperFlipbook* RunAnimation;
 
 public:	
-
-	//Components
+	
+	//Flipbook component
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Visuals")
 		class UPaperFlipbookComponent* FlipBook;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Physics")
-		class UCapsuleComponent* Capsule;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Physics")
-		class UArrowComponent* Arrow;
-
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
